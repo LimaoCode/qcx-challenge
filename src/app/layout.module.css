@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  min-width: 100vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vh;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menuListItem {
+  margin: 0px 32px 0px 32px;
+}
+
+.menuListItem:hover {
+  color: #fb6314;
+}
+
+.footer {
+  background-color: #faf2e7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  min-width: 100vh;
+}
+
+.footerContent {
+  color: #121212;
+  font-weight: bold;
+  font-size: medium;
+}
