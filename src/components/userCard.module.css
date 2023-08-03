@@ -1,5 +1,99 @@
 .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #faf2e7;
   width: 900px;
   height: 400px;
+  text-transform: uppercase;
+}
+
+.avatarAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3rem;
+}
+
+.avatarAside a {
+  color: #fb6314;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.avatar {
+  background-color: #cdcdcd;
+  vertical-align: middle;
+  width: 192px;
+  height: 192px;
+  border-radius: 80%;
+}
+
+.dataAside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.dataItem {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.dataText {
+  color: #fb6314;
+}
+
+.dataValue {
+  color: #fb6314;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.repositoryButton {
+  background-color: inherit;
+  padding: 1rem 4rem;
+  border-color: #fb6314;
+  margin-right: 10%;
+  text-transform: uppercase;
+  color: #fb6314;
+  font-weight: bold;
+}
+
+.repositoryButton:hover {
+  background-color: #fb6314;
+  border-color: none;
+  text-transform: uppercase;
+  color: #faf2e7;
+  cursor: pointer;
+}
+
+.favoritesButton {
+  background-color: inherit;
+  padding: 1rem 4rem;
+  border-color: #fb6314;
+  text-transform: uppercase;
+  color: #fb6314;
+  font-weight: bold;
+}
+
+.favoritesButton:hover {
+  background-color: #fb6314;
+  border-color: none;
+  text-transform: uppercase;
+  color: #faf2e7;
+  cursor: pointer;
 }
