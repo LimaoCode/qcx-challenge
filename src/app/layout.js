@@ -21,7 +21,10 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <header className={styles.header}>
           <nav className={styles.nav}>
-            <Image src={logo} width={128} height={32} alt="logo pessoal" />
+            <Link href="#home-section" className={styles.menuListItem}>
+              <Image src={logo} width={128} height={32} alt="logo pessoal" />
+            </Link>
+
             <ul className={styles.menuList}>
               <Link href="#home-section" className={styles.menuListItem}>
                 Home
