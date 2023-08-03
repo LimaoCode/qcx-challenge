@@ -1,4 +1,4 @@
-import UserCard from "@/components/userCard";
+import UserCard from "@/components/UserCard";
 import styles from "./page.module.css";
 import {
   GitHubLogoIcon,
