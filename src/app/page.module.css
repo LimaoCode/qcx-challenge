@@ -94,12 +94,14 @@
 }
 
 .challenge {
-  height: 100vh;
   background-color: #fcbc7c;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 2rem;
 }
 
 .challenge h2 {

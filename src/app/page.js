@@ -8,6 +8,9 @@ import {
 import Link from "next/link";
 
 export default async function Home() {
+  const response = await fetch("https://api.github.com/users/limaocode");
+  const user = await response.json();
+
   return (
     <main className={styles.main}>
       <section id="home-section" className={styles.home}>
@@ -62,7 +65,7 @@ export default async function Home() {
 
       <section id="challenge-section" className={styles.challenge}>
         <h2>Desafio</h2>
-        <UserCard />
+        <UserCard user={user} />
       </section>
     </main>
   );
