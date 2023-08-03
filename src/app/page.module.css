@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  width: auto;
 }
 
+/* Home Screen */
 .home {
   min-height: 100vh;
   display: flex;
@@ -20,6 +22,8 @@
   background-image: url(../assets/background.jpg);
   position: absolute;
   background-size: cover;
+  vertical-align: middle;
+  align-items: center;
   top: 0;
   left: 0;
   bottom: 0;
@@ -31,12 +35,19 @@
 .home h1 {
   color: #fcbc7c;
   text-shadow: 0 0 1px #000;
-  font-size: 4rem;
+  font-size: 48px;
+  margin: 0 auto;
 }
 
 .home h3 {
   color: #faf2e7;
-  font-size: 2rem;
+  font-size: 24px;
+  text-shadow: 0 0 1px #000;
+  margin-top: 16px;
+}
+
+.home h3:hover {
+  color: #fcbc7c;
   text-shadow: 0 0 1px #000;
 }
 
@@ -44,9 +55,8 @@
   display: flex;
   position: absolute;
   flex-direction: row;
-  justify-content: space-between;
-  width: 350px;
-  margin: auto 0;
+  justify-content: space-around;
+  width: 100vw;
   bottom: 15px;
 }
 
@@ -64,22 +74,26 @@
   text-shadow: 0 0 1px #000;
 }
 
+/* About Screen */
 .about {
   background-color: #faf2e7;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
 }
 
 .about h2 {
   color: #000;
+  font-weight: bold;
+  font-size: 2rem;
   text-align: center;
-  margin: 8rem 0 5rem 0;
+  margin: 5rem 0 5rem 0;
 }
 
 .about h4 {
   color: #000;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   text-align: justify;
   margin-bottom: 1rem;
@@ -87,12 +101,13 @@
 
 .about p {
   color: #000;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   text-align: justify;
   margin-bottom: 1rem;
 }
 
+/* Challenge Screen */
 .challenge {
   background-color: #fcbc7c;
   display: flex;
@@ -105,7 +120,129 @@
 }
 
 .challenge h2 {
-  color: #121212;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
   text-align: center;
   margin: 5rem 0 5rem 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .home {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home:before {
+    content: "";
+    background-image: url(../assets/background.jpg);
+    position: absolute;
+    background-size: cover;
+    vertical-align: middle;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.25;
+  }
+
+  .home h1 {
+    color: #fcbc7c;
+    text-shadow: 0 0 1px #000;
+    font-size: 3rem;
+  }
+
+  .home h3 {
+    color: #faf2e7;
+    font-size: 2rem;
+    text-shadow: 0 0 1px #000;
+  }
+
+  .home h3:hover {
+    color: #fcbc7c;
+    text-shadow: 0 0 1px #000;
+  }
+
+  .divIcons {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+    margin: auto 0;
+    bottom: 15px;
+  }
+
+  .icon {
+    color: #faf2e7;
+    width: 64px;
+    height: 64px;
+    text-shadow: 0 0 1px #000;
+  }
+
+  .icon:hover {
+    color: #fcbc7c;
+    width: 64px;
+    height: 64px;
+    text-shadow: 0 0 1px #000;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about h4 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .home h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home h1 {
+    font-size: 4rem;
+  }
+
+  .home h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .home h1 {
+    font-size: 4rem;
+  }
+
+  .home h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .home h1 {
+    font-size: 5rem;
+  }
+
+  .home h3 {
+    font-size: 3rem;
+  }
 }

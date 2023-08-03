@@ -4,16 +4,17 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #faf2e7;
-  width: 60%;
-  padding: 4rem;
+  width: 90%;
+  padding: 1rem;
   text-transform: uppercase;
 }
 
 .aside {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+  margin: 10px 0;
 }
 
 .card:has(.repoList) {
@@ -30,7 +31,7 @@
 .avatarAside a {
   color: #fb6314;
   font-weight: bold;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .avatar {
@@ -50,7 +51,7 @@
 .data {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .dataItem {
@@ -66,20 +67,20 @@
 .dataValue {
   color: #fb6314;
   font-weight: 500;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
 .repositoryButton {
   background-color: inherit;
-  padding: 1rem 4rem;
+  padding: 1rem 0;
   border-color: #fb6314;
-  margin-right: 10%;
   text-transform: uppercase;
   color: #fb6314;
   font-weight: bold;
@@ -97,13 +98,15 @@
 
 .favoritesButton {
   background-color: inherit;
-  padding: 1rem 4rem;
+  padding: 1rem 0;
   border-color: #fb6314;
   text-transform: uppercase;
+  align-items: center;
   color: #fb6314;
   font-weight: bold;
   white-space: nowrap;
   width: 100%;
+  margin-top: 16px;
 }
 
 .favoritesButton:hover {
@@ -115,47 +118,94 @@
 }
 
 .repoList {
-  margin: 2rem 0;
-  width: 80%;
+  margin: 1rem 0;
+  width: 90%;
 }
 
 .repoList h3 {
   color: #fb6314;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 .repoList li {
   color: #fb6314;
+  font-size: 12px;
   list-style: none;
   background: #faf2e7;
-
   padding: 5px 0 5px 10px;
 }
+
 .repoList li:nth-child(odd) {
   background: #f48c4c;
   color: #faf2e7;
 }
 
 .favList {
-  margin: 2rem 0;
-  width: 80%;
+  margin: 1rem 0;
+  width: 90%;
 }
 
 .favList h3 {
   color: #fb6314;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 .favList li {
   color: #fb6314;
+  font-size: 12px;
   list-style: none;
   background: #faf2e7;
-
   padding: 5px 0 5px 10px;
 }
+
 .favList li:nth-child(odd) {
   background: #f48c4c;
   color: #faf2e7;
+}
+
+@media only screen and (min-width: 1280px) {
+  .card {
+    padding: 4rem;
+  }
+
+  .aside {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .repositoryButton {
+    margin-right: 3rem;
+  }
+
+  .favoritesButton {
+    margin-top: 0;
+  }
+
+  .repoList h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .repoList li {
+    font-size: 1rem;
+  }
+
+  .favList h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .favList li {
+    font-size: 1rem;
+  }
 }

@@ -4,11 +4,11 @@
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
-  min-width: 100vh;
+  min-width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
   box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
   background-color: rgb(0 0 0 / 70%) !important;
@@ -19,7 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .menuList {
@@ -27,6 +27,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100vw;
 }
 
 .menuListItem {
@@ -42,14 +43,15 @@
   background-color: rgb(0 0 0 / 70%) !important;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  min-width: 100vh;
+  padding: 2rem 0;
+  min-width: 100vw;
 }
 
 .footerContent {
   color: #fff;
   font-weight: bold;
   font-size: medium;
+  text-align: center;
 }

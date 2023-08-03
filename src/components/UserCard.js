@@ -3,26 +3,30 @@
 import Link from "next/link";
 import styles from "./userCard.module.css";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function UserCard({ user }) {
   const [repos, setRepos] = useState();
   const [favs, setFavs] = useState();
 
   async function getRepoData() {
-    await fetch("https://api.github.com/users/limaocode/repos")
-      .then((response) => response.json())
-      .then((repos) => {
-        setRepos(repos);
-      });
+    repos
+      ? setRepos(null)
+      : await fetch("https://api.github.com/users/limaocode/repos")
+          .then((response) => response.json())
+          .then((repos) => {
+            setRepos(repos);
+          });
   }
 
   async function getFavData() {
-    await fetch("https://api.github.com/users/limaocode/starred")
-      .then((response) => response.json())
-      .then((favs) => {
-        setFavs(favs);
-      });
+    favs
+      ? setFavs(null)
+      : await fetch("https://api.github.com/users/limaocode/starred")
+          .then((response) => response.json())
+          .then((favs) => {
+            setFavs(favs);
+          });
   }
 
   return (
@@ -61,13 +65,13 @@ export default function UserCard({ user }) {
               className={styles.repositoryButton}
               onClick={() => getRepoData()}
             >
-              Ver repositórios
+              {repos ? "Ocultar repositórios" : "Ver repositórios"}
             </button>
             <button
               className={styles.favoritesButton}
               onClick={() => getFavData()}
             >
-              Ver favoritos
+              {favs ? "Ocultar favoritos" : "Ver favoritos"}
             </button>
           </div>
         </div>
