@@ -1,14 +1,23 @@
 import Link from "next/link";
 import styles from "./userCard.module.css";
 import Image from "next/image";
-import logo from "@/assets/code.png";
 
-export default function UserCard() {
+export default async function UserCard() {
+  const response = await fetch("https://api.github.com/users/limaocode");
+  const user = await response.json();
+
   return (
     <div className={styles.card}>
       <div className={styles.avatarAside}>
-        <Image src={logo} alt="logo" className={styles.avatar} />
-        <Link href="#">
+        <Image
+          src={user.avatar_url}
+          alt="logo"
+          priority
+          width={192}
+          height={192}
+          className={styles.avatar}
+        />
+        <Link href={user.html_url} target="_blank">
           <span>Visitar Perfil</span>
         </Link>
       </div>
@@ -16,15 +25,15 @@ export default function UserCard() {
         <div className={styles.data}>
           <div className={styles.dataItem}>
             <h4 className={styles.dataText}>Repositórios:</h4>
-            <span className={styles.dataValue}>15</span>
+            <span className={styles.dataValue}>{user.public_repos}</span>
           </div>
           <div className={styles.dataItem}>
             <h4 className={styles.dataText}>Seguidores:</h4>
-            <span className={styles.dataValue}>15</span>
+            <span className={styles.dataValue}>{user.followers}</span>
           </div>
           <div className={styles.dataItem}>
             <h4 className={styles.dataText}>Seguindo:</h4>
-            <span className={styles.dataValue}>15</span>
+            <span className={styles.dataValue}>{user.following}</span>
           </div>
         </div>
         <div className={styles.buttons}>

@@ -7,7 +7,7 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={styles.main}>
       <section id="home-section" className={styles.home}>
