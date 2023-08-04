@@ -15,7 +15,7 @@ export default async function Home() {
     <main className={styles.main}>
       <section id="home-section" className={styles.home}>
         <h1>Desenvolvedor Front End</h1>
-        <Link href="https://github.com/qcx/desafio-frontend" target="_blank">
+        <Link href="https://github.com/LimaoCode/qcx-challenge" target="_blank">
           <h3>Desafio Qconcursos.com</h3>
         </Link>
         <div className={styles.divIcons}>
