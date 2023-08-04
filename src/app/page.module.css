@@ -21,9 +21,8 @@
   content: "";
   background-image: url(../assets/background.jpg);
   position: absolute;
+  background-position: center;
   background-size: cover;
-  vertical-align: middle;
-  align-items: center;
   top: 0;
   left: 0;
   bottom: 0;

@@ -19,7 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .menuList {
@@ -27,11 +27,10 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
 }
 
 .menuListItem {
-  margin: 0px 32px 0px 32px;
+  margin: 0px 32px;
 }
 
 .menuListItem:hover {
@@ -54,4 +53,17 @@
   font-weight: bold;
   font-size: medium;
   text-align: center;
+}
+
+@media only screen and (max-width: 639px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .menuIcon {
+    visibility: hidden;
+    content-visibility: hidden;
+  }
 }
