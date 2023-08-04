@@ -71,12 +71,51 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
 html,
@@ -100,138 +139,120 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Cabeçalho responsivo */
+header {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+nav {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0 0 0) !important;
+}
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+.nav__menu-bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+}
+
+.nav__menu-bar div {
+  width: 40px;
+  height: 4px;
+  background-color: #fcbc7c;
+  border-radius: 2px;
+}
+
+.nav__menu-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 3rem;
+  bottom: 0;
+  width: 288px;
+  row-gap: 24px;
+  right: -288px;
+  padding: 24px 16px;
   margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  transition: all 0.2s;
+  min-height: calc(100vh - 48px);
+  background-color: rgb(0 0 0 / 60%);
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+
+.nav__menu-list.active {
+  right: 0;
 }
-body {
-  line-height: 1;
+
+.nav__link {
+  font-size: 18px;
+  position: relative;
+  transition: all 0.2s;
 }
-ol,
-ul {
-  list-style: none;
+
+.nav__link:hover {
+  font-weight: bold;
+  color: #fcbc7c;
 }
-blockquote,
-q {
-  quotes: none;
+
+.center {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+
+/* Rodapé responsivo */
+.footer {
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+  background-color: rgb(0 0 0 / 70%) !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-width: 100vw;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+.footerContent {
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu-bar {
+    display: none;
+  }
+  .nav__menu-list {
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    margin: 0 16px;
+    column-gap: 24px;
+    align-items: center;
+    background-color: none;
+  }
+  .nav__link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    bottom: -16px;
+    left: 0;
+    background-color: #fcbc7c;
+    transition: all 0.2s;
+  }
+
+  .nav__link:hover:before {
+    width: 100%;
+  }
 }
