@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://imgur.com/HqwBGx6.png)
 
-## Getting Started
 
-First, run the development server:
+# QCX-challenge
+
+
+Olá gostaria muito de um feedback sobre as praticas que utilizei para realizar o desafio.
+
+
+## Stack utilizada
+
+**Front-end:** NextJS com CSS
+
+## Instalação
+
+Para ter acesso ao código em sua maquina clone o projeto:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/qcx/desafio-frontend.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Após o clone gere a node modules:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+  yarn
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para rodar o projeto localmente use:
 
-## Learn More
+```bash
+  yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Caso deseje acesso ao projeto no ambiente de produção, eu realizei o deploy na [Vercel](https://vercel.com/):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Link produção: https://qcx-challenge.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    
+## Documentação de cores
 
-## Deploy on Vercel
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Principal      | ![#fb6314](https://via.placeholder.com/10/fb6314?text=+) #fb6314 |
+| Secundaria      | ![#f48c4c](https://via.placeholder.com/10/f48c4c?text=+) #f48c4c |
+| Fundo       | ![#fcbc7c](https://via.placeholder.com/10/fcbc7c?text=+) #fcbc7c |
+| Light       | ![#faf2e7](https://via.placeholder.com/10/faf2e7?text=+) #faf2e7 |
+| Dark       | ![#e7905f](https://via.placeholder.com/10/e7905f?text=+) #e7905f |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Autor
+
+- [João Vitor](https://www.linkedin.com/in/limaocode/)
+
